@@ -3,7 +3,7 @@ name = input("What is your name? ")
 age = input("Hello " + name + ", how old are you? ")
 
 print("How can I help you today?")
-print("Please select an option down below from the list by entering the number: ")
+print("\nPlease select an option down below from the list by entering the number: ")
 
 print("1. Place Holder for Option 1")
 print("2. Place Holder for Option 2")
