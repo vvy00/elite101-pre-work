@@ -1,5 +1,16 @@
 print("Welcome to the Bank Chatbot 🏦💰!")
 name = input("What is your name? ")
+age = input("How old are you? ")
+
+try:
+    age = int(age)
+    if age < 18:
+        print("Since you are under 18, we recommend opening a Student or Youth Savings Account.")
+    else:
+        print("Great! You are eligible for all our account types, including Checking and Savings Accounts.")
+except ValueError:
+    print("That does not look like a valid age, but no worries though let's continue!")
+
 print("Hello " + name + "!, I am here to help with your banking services. ")
 
 balance = 0
@@ -30,13 +41,13 @@ elif choice =="5":
         deposit_amount = float(deposit)
         if deposit_amount > 0:
             balance += deposit_amount
-            print(f"You have sucessfully deposited ${deposit_amount:.2f} to your account. New balance: {balance:.2f}")
+            print(f"💰 You have sucessfully deposited ${deposit_amount:.2f} to your account. New balance: {balance:.2f}")
         else:
             print("Please enter a positive amount")
     except ValueError:
         print("Invalid amount. Please enter a number.")
 elif choice == "6":
-    print("\nConnecting you with a live agent now... Thank you for visiting!")
+    print("\n👋 Connecting you with a live agent now... Thank you for visiting!")
 else:
     print("Not an option. Please restart again and choose an option (1-4).")
 
